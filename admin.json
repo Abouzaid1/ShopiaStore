@@ -1,0 +1,27 @@
+[
+    {
+        "id":"admin1",
+        "name":"abouzaid",
+        "password":"admin123456789"
+    },
+    {
+        "id":"admin2",
+        "name":"mohamed",
+        "password":"admin123456789"
+    },
+    {
+        "id":"admin3",
+        "name":"Amr",
+        "password":"Amr123456789"
+    },
+    {
+        "id":"admin4",
+        "name":"MohamedAyman",
+        "password":"Mo123456789"
+    },
+    {
+        "id":"admin5",
+        "name":"YousefHaitham",
+        "password":"YM123456789"
+    }
+]

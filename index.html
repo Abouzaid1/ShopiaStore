@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" dataTheme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/uiverse.css">
+ <link rel="icon" href="Images/58429073a6515b1e0ad75abc.png" width="500px">
+</head>
+
+<body>
+
+  <!-- Nav Bar and it will be the same for all pages except -->
+  <nav class="navbar navbar-expand-lg navbar-light w-100 mt-0 fixed-top">
+    <div class="container-fluid">
+      <a class="logo" href="#">Shopia</a>
+      <button class="border-0 bg-transparent" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class=""><label class="bar d-lg-none" for="check">
+            <input type="checkbox" id="check">
+
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
+          </label></span>
+      </button>
+      <div class="collapse navbar-collapse p-5 p-lg-0 " id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto gap-5 fs-6 fw-bold">
+          <li class="nav-item">
+            <a class="nav-link  " aria-current="page" id="indexHref" href="index.html?role=null&username=null">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link notactive" aria-current="page" id="shopHref"
+              href="shop.html?role=null&username=null">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link notactive" id="cartHref" href="cart.html?role=null&username=null">Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link notactive" id="wishlistHref" href="wishlist.html?role=null&username=null">WishList</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link notactive" id="contactHref" href="contact.html?role=null&username=null">Contact</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle " href="shop.html?role=null&username=null" id="navbarDropdown"
+              role="button" data-bs-toggle="dropdown" aria-expanded="true">
+              Setting
+            </a>
+            <ul class="dropdown-menu py-5 border-white" style="width: 300px;" aria-labelledby="navbarDropdown">
+              <li class="d-flex justify-content-around align-items-center">
+                <p class="hover-cat">Dark mode</p><label class="ui-switch">
+                  <input id="darkMode" type="checkbox">
+                  <div class="slider">
+                    <div class="circle"></div>
+                  </div>
+                </label>
+              </li>
+              <hr>
+              <li id="logout" style="cursor: pointer;" class="d-flex align-items-center justify-content-around fs-5">
+                <p class="hover-cat">Logout</p>
+                <p><i class="fa-solid fa-arrow-right-from-bracket" style="color: #ffffff;"></i></p>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown" id="adminPages">
+            <!-- <a class="nav-link dropdown-toggle " href="shop.html?role=null&username=null" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="true">
+              Admin
+            </a>
+            <ul class="dropdown-menu border-white"  aria-labelledby="navbarDropdown">
+              <li class="ms-2 " style="cursor: pointer;"><p class="hover-cat m-0">Orders</p>
+              </li>
+              <hr>
+              <li class="ms-2" style="cursor: pointer;"><p class="hover-cat m-0">Products</p>
+              </li>
+              <hr>
+              <li class="ms-2" style="cursor: pointer;"><p class="hover-cat m-0">Messages</p>
+              </li>   
+            </ul> -->
+          </li>
+        </ul>
+        <div class="d-flex gap-4 ">
+
+          <a class="text-dark text-decoration-none fs-5" href="sign.html" id="loginBtn"><button class="Btn">
+
+              <div class="sign"><svg viewBox="0 0 512 512">
+                  <path
+                    d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z">
+                  </path>
+                </svg></div>
+
+              <div class="text">Login</div>
+            </button></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- The First Section in the home page  -->
+  <section class="container-fluid p-3">
+    <div class="row mx-md-5 p-5 header-background position-relative overflow-hidden">
+      <div class="col-xl-6 col-lg-10 text-light div-header box">
+        <p class="text-light">TREND FASHION ZONE</p>
+        <h1 class="header-text">We Always Build <span class="text-light typed">Stunning Fashion Experience</span></h1>
+        <div class="d-flex my-4 gap-2">
+          <a href="shop.html"><button
+              class="fw-bolder fs-5 border-0 btn-shop rounded-pill px-5 py-3 bg-dark text-light">Shop Now</button></a>
+          <button class="fw-bolder fs-5 border-2 btn-watch rounded-pill px-5 py-3 bg-transparent text-light">Watch
+            Trends</button>
+        </div>
+      </div>
+      <!-- <div class="col-lg-6">
+        <img class="img-header" src="images/freestocks-_3Q3tsJ01nc-unsplash.png" width="1000px" alt="">
+      </div> -->
+      <!-- <div class="position-absolute w-100 top-0 end-0 text-end d-sm-none d-lg-block">
+        <img class="img-header" src="images/freestocks-_3Q3tsJ01nc-unsplash.png" width="1500px" alt="">
+      </div> -->
+    </div>
+  </section>
+  <hr>
+  <!-- second section  -->
+  <section class=" overflow-scroll slide-right">
+    <div class="w-100 row px-5 d-flex flex-nowrap infinit-animate  slider">
+      <!-- cards of second section -->
+      <div class="cards my-sm-2 my-lg-0 d-flex align-items-center gap-3">
+        <div class="section2-img ">
+          <img src="Images/janko-ferlic-Q13lggdvtVY-unsplash.jpg" width="100px" alt="">
+        </div>
+        <div>
+          <h4>Kids Hub <span class="text-muted fs-6">2023</span></h4>
+        </div>
+      </div>
+      <!-- cards of second section -->
+      <div class="cards my-sm-2 my-lg-0 d-flex align-items-center gap-3">
+        <div class="section2-img ">
+          <img src="Images/markus-spiske-jddw6iA31sE-unsplash.jpg" width="100px" alt="">
+        </div>
+        <div>
+          <h4>New Collection <span class="text-muted fs-6"></span></h4>
+        </div>
+      </div>
+      <!-- cards of second section -->
+      <div class="cards my-sm-2 my-lg-0 d-flex align-items-center gap-3">
+        <div class="section2-img ">
+          <img src="Images/katsiaryna-endruszkiewicz-BteCp6aq4GI-unsplash.jpg" width="100px" alt="">
+        </div>
+        <div>
+          <h4>Women <span class="text-muted fs-6">2023</span></h4>
+        </div>
+      </div>
+      <!-- cards of second section -->
+      <div class="cards my-sm-2 my-lg-0 d-flex align-items-center gap-3">
+        <div class="section2-img ">
+          <img src="Images/hunters-race-hNoSCxPWYII-unsplash.jpg" width="100px" alt="">
+        </div>
+        <div>
+          <h4>Men <span class="text-muted fs-6">2023</span></h4>
+        </div>
+      </div>
+      <!-- cards of second section -->
+      <div class="cards my-sm-2 my-lg-0 d-flex align-items-center gap-3">
+        <div class="section2-img ">
+          <img src="Images/laura-chouette-AIodgfe90wA-unsplash.jpg" width="100px" alt="">
+        </div>
+        <div>
+          <h4>B & W<span class="text-muted fs-6">Colors</span></h4>
+        </div>
+      </div>
+      <div class="cards my-sm-2 my-lg-0 d-flex align-items-center gap-3">
+        <div class="section2-img ">
+          <img src="Images/alyssa-strohmann-TS--uNw-JqE-unsplash.jpg" width="100px" alt="">
+        </div>
+        <div>
+          <h4>New Season <span class="text-muted fs-6">10</span></h4>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </section>
+
+  <hr>
+
+  <!-- section Three  -->
+  <section class="container">
+    <h2 class="text-sectionthree py-5 fw-bold ">
+      Browse through our carefully carted collection of high-quality clothing & accessories featuring the latest trends
+      and style ------------
+    </h2>
+  </section>
+
+  <!-- section four  -->
+  <section class="container">
+    <div class="d-flex justify-content-between">
+      <h2 class="text-sectionfour fs-1 fw-bolder">2023 New Arrivals</h2>
+      <a href="shop.html"><button
+          class=" fw-bolder fs-5 border-0 btn-shop rounded-pill px-5 py-3 bg-dark text-light">Shop Now</button></a>
+    </div>
+    <!-- trending products ------------------------------------- -->
+    <div class="container-fluid">
+      <div class="row justify-content-center m-auto" id="newArrivals">
+        <!-- <div class="col-lg-4 p-2">
+          <div class="w-100 overflow-hidden product-div text-center">
+            <img src="Images/luobulinka-FO4mQZi1c0M-unsplash.jpg" class="text-center" width="430px" alt="">
+          </div>
+          <div class="d-flex align-items-center justify-content-between">
+            <div>
+              <h4 class="mx-1 fw-bolder mt-4  ">Full Slave outfit</h4>
+              <h4 class="mx-1 fw-bolder " style="color: #fb701f;">$147.00</h4>
+            </div>
+            <div class="d-flex gap-2">
+              <div class=" rounded-circle color-product" style="background-color: #fb701f;"></div>
+              <div class=" rounded-circle color-product" style="background-color: #fcdf1f;"></div>
+              <div class=" rounded-circle color-product" style="background-color: #ff0000;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 p-2">
+          <div class="w-100 overflow-hidden product-div">
+            <img src="Images/dami-adebayo-k6aQzmIbR1s-unsplash.jpg" width="430px" alt="">
+          </div>
+          <div class="d-flex align-items-center justify-content-between">
+            <div>
+              <h4 class="mx-1 fw-bolder mt-4  ">Formal outfits</h4>
+              <h4 class="mx-1 fw-bolder " style="color: #fb701f;">$189.00</h4>
+            </div>
+            <div class="d-flex gap-2">
+              <div class=" rounded-circle color-product" style="background-color: #873200;"></div>
+              <div class=" rounded-circle color-product" style="background-color: #291c0e;"></div>
+              <div class=" rounded-circle color-product" style="background-color: #531515;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 p-2">
+          <div class="w-100 overflow-hidden product-div">
+            <img src="Images/austin-wade-d2s8NQ6WD24-unsplash.jpg" width="430px" alt="">
+          </div>
+          <div class="d-flex align-items-center justify-content-between">
+            <div>
+              <h4 class="mx-1 fw-bolder mt-4  ">Boy different styles</h4>
+              <h4 class="mx-1 fw-bolder " style="color: #fb701f;">$270.00</h4>
+            </div>
+            <div class="d-flex gap-2">
+              <div class=" rounded-circle color-product" style="background-color: #fb701f;"></div>
+              <div class=" rounded-circle color-product" style="background-color: #684500;"></div>
+              <div class=" rounded-circle color-product" style="background-color: #ff0000;"></div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      </div>
+
+  </section>
+  <hr>
+
+  <!-- section five  -->
+  <section class="container-fluid">
+    <div class="row p-md-5 gap-5 justify-content-center p-3 overflow-hidden">
+      <div class="col-lg-5 card1 position-relative p-5 box">
+        <div class="position-absolute bottom-0 ">
+          <p class="font-style-1  fs-1 text-light m-0">New Release</p>
+          <p class="font-style-1 text-light">Presents new trends in 2023</p>
+          <div class="mb-5">
+            <button class="fw-bolder fs-6 border-0 btn-shop rounded-pill px-3 py-1 bg-dark text-light py-3 px-5">Look
+              New 2023</button>
+            <button
+              class="fw-bolder fs-6 border-2 border btn-watch  rounded-pill px-3 py-1 bg-transparent text-light py-3 px-5"><i
+                class="fa-solid fa-play" style="color: #ffffff;"></i> Watch Trending</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 overflow-hidden ">
+        <div class="card2 position-relative p-5 mb-5 box">
+
+          <div class="mb-5">
+            <button
+              class="fw-bolder fs-6 border-2 border btn-watch  rounded-pill px-3 py-1 bg-transparent text-light py-3 px-5"><i
+                class="fa-solid fa-play" style="color: #ffffff;"></i> Watch Trending</button>
+          </div>
+          <div class="position-absolute bottom-0 ">
+            <p class="font-style-1  fs-1 text-light m-0">Trendy Fashion</p>
+            <p class="font-style-1 text-light">New in town . Winter Fashion</p>
+          </div>
+        </div>
+        <div class="card3 position-relative p-5 mt-5 box">
+
+          <div class="position-absolute bottom-0 ">
+
+            <p class="font-style-1  fs-1 text-bg-dark  m-0">Black & White Trend </p>
+            <p class="font-style-1 text-bg-dark">Balck . White</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <!-- section five  -->
+  <section class="container-fluid p-md-5">
+    <div class="w-100 section-five-height row m-0 align-items-end justify-content-center">
+
+
+      <button
+        class="fw-bolder fs-6 border-2 border btn-watch  rounded-pill w-50 mb-5 px-3 py-1 bg-transparent text-light py-3 px-5"><i
+          class="fa-solid fa-play" style="color: #ffffff;"></i> Watch Trending</button>
+
+    </div>
+
+  </section>
+
+  <!-- section six  -->
+  <hr>
+  <section class="container-fluid p-md-5 p-3 overflow-hidden">
+    <div class="row  p-2 py-5 section-six">
+      <div class="col-lg-7 row">
+        <div class="col-lg-3  col-6">
+          <h3 class="text-light mb-3">Shop</h3>
+          <p class="text-light"><a class="text-muted text-decoration-none" href="">Fashion</a></p>
+          <p class="text-light"><a class="text-muted text-decoration-none" href="">Men</a></p>
+          <p class="text-light"><a class="text-muted text-decoration-none" href="">Women</a></p>
+          <p class="text-light"><a class="text-muted text-decoration-none" href="">Kids</a></p>
+        </div>
+        <div class="col-lg-3 col-6">
+          <h3 class="text-light mb-3 ">About</h3>
+          <p class="text-light"><a class="text-muted text-decoration-none" href="">Our Story</a></p>
+          <p class="text-light"><a class="text-muted text-decoration-none" href="">Wishist</a></p>
+          <p class="text-light"><a class="text-muted text-decoration-none" href="">Cart</a></p>
+          <p class="text-light"><a class="text-muted text-decoration-none" href="">Trends</a></p>
+        </div>
+        <div class="col-lg-3  col-12">
+          <h3 class="text-light  mb-3">Help</h3>
+          <p class=""><a class="text-muted text-decoration-none" href="">Contact</a></p>
+          <p class="text-light"><a class="text-muted text-decoration-none" href="">FAQ</a></p>
+          <p class="text-light"><a class="text-muted text-decoration-none" href="">Accessabilty</a></p>
+        </div>
+      </div>
+      <div class="col-lg-5 justify-content-center ">
+        <p class="text-light fs-1 fw-bolder mx-0">Newsletter</p>
+        <p class="text-light">Get the latest about us <span class="fw-bold">Sign up</span> Lorem ipsum dolor sit amet.
+        </p>
+
+      </div>
+
+      <div class="d-flex gap-5 mt-5">
+        <i class="fa-brands fa-facebook fs-3" style="color: #ffffff;"></i>
+        <i class="fa-brands fa-twitter fs-3" style="color: #ffffff;"></i>
+        <i class="fa-brands fa-linkedin fs-3" style="color: #ffffff;"></i>
+      </div>
+    </div>
+
+  </section>
+
+  <script src="js/typed.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/urlParams.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+
+</html>

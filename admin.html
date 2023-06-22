@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" dataTheme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/uiverse.css">
+  <link rel="icon" href="Images/58429073a6515b1e0ad75abc.png" width="500px">
+</head>
+
+<body>
+  
+  <!-- Nav Bar and it will be the same for all pages except -->
+  <nav class="navbar navbar-expand-lg navbar-light w-100 mt-0 fixed-top">
+    <div class="container-fluid">
+      <a class="logo" href="#">Shopia</a>
+      <button class="border-0 bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class=""><label class="bar d-lg-none" for="check">
+          <input type="checkbox" id="check">
+      
+          <span class="top"></span>
+          <span class="middle"></span>
+          <span class="bottom"></span>
+      </label></span>
+      </button>
+      <div class="collapse navbar-collapse p-5 p-lg-0 " id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto gap-5 fs-6 fw-bold">
+          <li class="nav-item">
+            <a class="nav-link notactive " aria-current="page" id="indexHref" href="index.html?role=null&username=null">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link notactive" aria-current="page" id="shopHref" href="shop.html?role=null&username=null">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link notactive" id="cartHref" href="cart.html?role=null&username=null">Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link notactive" id="wishlistHref" href="wishlist.html?role=null&username=null">WishList</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link notactive" id="contactHref" href="contact.html?role=null&username=null">Contact</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle " href="shop.html?role=null&username=null" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="true">
+              Setting
+            </a>
+            <ul class="dropdown-menu py-5 border-white" style="width: 300px;" aria-labelledby="navbarDropdown">
+              <li class="d-flex justify-content-around align-items-center"><p class="hover-cat">Dark mode</p><label class="ui-switch">
+                <input id="darkMode" type="checkbox">
+                <div class="slider">
+                  <div class="circle"></div>
+                </div>
+              </label>
+              </li>
+              <hr>
+              <li id="logout" style="cursor: pointer;" class="d-flex align-items-center justify-content-around fs-5">
+                <p class="hover-cat">Logout</p>
+                <p><i class="fa-solid fa-arrow-right-from-bracket" style="color: #ffffff;"></i></p>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item " id="adminPages">
+            <!-- <a class="nav-link dropdown-toggle " href="shop.html?role=null&username=null" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="true">
+              Admin
+            </a>
+            <ul class="dropdown-menu border-white"  aria-labelledby="navbarDropdown">
+              <li class="ms-2 " style="cursor: pointer;"><p class="hover-cat m-0">Orders</p>
+              </li>
+              <hr>
+              <li class="ms-2" style="cursor: pointer;"><p class="hover-cat m-0">Products</p>
+              </li>
+              <hr>
+              <li class="ms-2" style="cursor: pointer;"><p class="hover-cat m-0">Messages</p>
+              </li>   
+            </ul> -->
+          </li>
+        </ul>
+        <div class="d-flex gap-4 " >
+          
+          <a class="text-dark text-decoration-none fs-5"  href="sign.html" id="loginBtn"><button  class="Btn">
+  
+            <div class="sign"><svg viewBox="0 0 512 512"><path d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"></path></svg></div>
+            
+            <div class="text" >Login</div>
+          </button></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<section>
+    <div class="p-5 row w-100 justify-content-around">
+        <div class="col-lg-3">
+            <div class=" py-3 background__theme product-page-div mb-5">
+                <p  class="tap fs-5 my-4 product-page-div px-5 py-2 notactive " style="cursor: pointer;" admin_page="messages">Messages <i class="fa-solid fa-chevron-right fs-6 ms-2" style="color: #ffffff;"></i></p>
+                <hr>
+                <p   class="tap fs-5 my-4 product-page-div px-5 py-2 notactive " style="cursor: pointer;" admin_page="orders">Orders <i class="fa-solid fa-chevron-right fs-6 ms-2" style="color: #ffffff;"></i></p>
+                <hr>
+                <p   class="tap fs-5 my-4 product-page-div px-5 py-2 notactive " style="cursor: pointer;" admin_page="products">Products <i class="fa-solid fa-chevron-right fs-6 ms-2" style="color: #ffffff;"></i></p>
+            </div>
+        </div>
+        <div class="col-lg-9 taps" admin_page="messages">
+            <div class="p-5 background__theme product-page-div " id="messageBlock">
+                <!-- <h5 class="m-0 fw-bolder">Abouzaid</h5>
+                <p class=" fw-lighter">abouzaid@gmail.com</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi delectus dolorem necessitatibus iste provident qui, libero asperiores rem dolores maxime tenetur repellendus recusandae aspernatur nisi minima. Omnis nam provident ullam.</p>
+                <hr> -->
+            </div>
+        </div>
+        <div class="col-lg-9 taps d-none" admin_page="orders" >
+            <div class="w-100 p-5 background__theme product-page-div " id="orderBlock">
+                <!-- <div class="d-md-flex justify-content-between align-items-end w-100">
+                    <div>
+    
+                        <h5 class="m-0 fw-bolder">Ahmed Abouzaid</h5>
+                        <p class=" fw-lighter">abouzaid@gmail.com</p>
+                        <p>Address</p>
+                        <p>01060405090</p>
+                        <p>TotalPrice = 500 L.E</p>
+                    </div>
+                    <div class="">
+    
+                        <button class="bg-transparent border-1 border px-4 py-2 rounded-pill btn-shop"> completed </button>
+                    </div>
+                </div>
+                <hr> -->
+            </div>
+        </div>
+        <div class="col-lg-9 taps d-none" admin_page="products" >
+            <div class="w-100 p-5 background__theme product-page-div">
+                <p class="mt-4">Product Id</p>
+                <input class="input" id="id" type="text">
+                <p class="mt-4">Product name</p>
+                <input class="input" id="name" type="text">
+                <p class="mt-4">Product Description</p>
+                <input class="input" id="desc" type="text">
+                <p class="mt-4">Product Price</p>
+                <input class="input" id="price" type="text">
+                <p class="mt-4">Product Img</p>
+                <input class="input" id="img" type="text">
+                <p class="mt-4">Product Colors</p>
+                <input class="input" id="color1" type="text">
+                <input class="input" id="color2" type="text">
+                <input class="input" id="color3" type="text">
+                <p class="mt-4">Product Sizes</p>
+                <input class="input" id="size1" type="text">
+                <input class="input" id="size2" type="text">
+                <input class="input" id="size3" type="text">
+                <p class="mt-4">Product Gallary</p>
+                <input class="input" id="img1" type="text">
+                <input class="input" id="img2" type="text">
+                <input class="input" id="img3" type="text">
+                <p class="mt-4">Product Stock</p>
+                <input class="input" id="stock" type="text">
+                <p class="mt-4">Product Rate</p>
+                <input class="input" id="rate" type="text">
+                <p>Product Gender</p>
+                <input class="input" id="gender" type="text">
+                <br>
+                <button class="bg-transparent border-1 border px-4 py-2 rounded-pill btn-shop mt-5 w-100"> Add this Product </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+  <script src="js/typed.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/urlParams.js"></script>
+    <script src="js/admin.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+
+</html>

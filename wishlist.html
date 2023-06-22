@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dataTheme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/uiverse.css">
+  <link rel="icon" href="Images/58429073a6515b1e0ad75abc.png" width="500px">
+</head>
+
+<body>
+  
+  <!-- Nav Bar and it will be the same for all pages except -->
+  <nav class="navbar navbar-expand-lg navbar-light w-100 mt-0 fixed-top">
+    <div class="container-fluid">
+      <a class="logo" href="#">Shopia</a>
+      <button class="border-0 bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class=""><label class="bar d-lg-none" for="check">
+          <input type="checkbox" id="check">
+      
+          <span class="top"></span>
+          <span class="middle"></span>
+          <span class="bottom"></span>
+      </label></span>
+      </button>
+      <div class="collapse navbar-collapse p-5 p-lg-0 " id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto gap-5 fs-6 fw-bold">
+          <li class="nav-item">
+            <a class="nav-link active notactive" aria-current="page" id="indexHref" href="index.html?role=null&username=null">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link notactive" aria-current="page" id="shopHref" href="shop.html?role=null&username=null">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link notactive" id="cartHref" href="cart.html?role=null&username=null">Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " id="wishlistHref" href="wishlist.html?role=null&username=null">WishList</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link notactive" id="contactHref" href="contact.html?role=null&username=null">Contact</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle " href="shop.html?role=null&username=null" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="true">
+              Setting
+            </a>
+            <ul class="dropdown-menu py-5 border-white" style="width: 300px;" aria-labelledby="navbarDropdown">
+              <li class="d-flex justify-content-around align-items-center"><p class="hover-cat">Dark mode</p><label class="ui-switch">
+                <input id="darkMode" type="checkbox">
+                <div class="slider">
+                  <div class="circle"></div>
+                </div>
+              </label>
+              </li>
+              <hr>
+              <li id="logout" style="cursor: pointer;" class="d-flex align-items-center justify-content-around fs-5">
+                <p class="hover-cat">Logout</p>
+                <p><i class="fa-solid fa-arrow-right-from-bracket" style="color: #ffffff;"></i></p>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown" id="adminPages">
+            <!-- <a class="nav-link dropdown-toggle " href="shop.html?role=null&username=null" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="true">
+              Admin
+            </a>
+            <ul class="dropdown-menu border-white"  aria-labelledby="navbarDropdown">
+              <li class="ms-2 " style="cursor: pointer;"><p class="hover-cat m-0">Orders</p>
+              </li>
+              <hr>
+              <li class="ms-2" style="cursor: pointer;"><p class="hover-cat m-0">Products</p>
+              </li>
+              <hr>
+              <li class="ms-2" style="cursor: pointer;"><p class="hover-cat m-0">Messages</p>
+              </li>   
+            </ul> -->
+          </li>
+        </ul>
+        <div class="d-flex gap-4 " >
+          
+          <a class="text-dark text-decoration-none fs-5"  href="sign.html" id="loginBtn"><button  class="Btn">
+  
+            <div class="sign"><svg viewBox="0 0 512 512"><path d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"></path></svg></div>
+            
+            <div class="text" >Login</div>
+          </button></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="container-fluid">
+    <div class="p-lg-5">
+      <h1 class="fw-bolder">Your Shopping WishList</h1>
+      <div class="row">
+        <div class="">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Product</th>
+                <th scope="col">Price</th>
+                <th scope="col">Add to cart</th>
+                
+
+              </tr>
+            </thead>
+            <tbody class=" align-items-center " id="cartTBody">
+              <!-- <tr >
+                        <th scope="row "  > 
+                            <img src="/Images/austin-wade-d2s8NQ6WD24-unsplash.jpg"
+                                       alt="" width="80px" class="rounded">
+                           </th>
+                        <td class="py-5">Mark</td>
+                        <td class="py-5">Otto</td>
+                        <td class="py-5">@mdo</td>
+                        <td class="py-5">@mdo</td>
+                      </tr> -->
+
+            </tbody>
+          </table>
+        </div>
+  </section>
+
+
+
+
+
+  <hr>
+  <section class="container-fluid p-md-5 p-3 ">
+    <div class="row  p-2 py-5 section-six">
+      <div class="col-lg-7 row">
+        <div class="col-lg-3  col-6">
+          <h3 class="text-light mb-3">Shop</h3>
+          <p class="text-light"><a class="text-muted text-decoration-none" href="">Fashion</a></p>
+          <p class="text-light"><a class="text-muted text-decoration-none" href="">Men</a></p>
+          <p class="text-light"><a class="text-muted text-decoration-none" href="">Women</a></p>
+          <p class="text-light"><a class="text-muted text-decoration-none" href="">Kids</a></p>
+        </div>
+        <div class="col-lg-3 col-6">
+          <h3 class="text-light mb-3 ">About</h3>
+          <p class="text-light"><a class="text-muted text-decoration-none" href="">Our Story</a></p>
+          <p class="text-light"><a class="text-muted text-decoration-none" href="">Wishist</a></p>
+          <p class="text-light"><a class="text-muted text-decoration-none" href="">Cart</a></p>
+          <p class="text-light"><a class="text-muted text-decoration-none" href="">Trends</a></p>
+        </div>
+        <div class="col-lg-3  col-12">
+          <h3 class="text-light  mb-3">Help</h3>
+          <p class=""><a class="text-muted text-decoration-none" href="">Contact</a></p>
+          <p class="text-light"><a class="text-muted text-decoration-none" href="">FAQ</a></p>
+          <p class="text-light"><a class="text-muted text-decoration-none" href="">Accessabilty</a></p>
+        </div>
+      </div>
+      <div class="col-lg-5 justify-content-center ">
+        <p class="text-light fs-1 fw-bolder mx-0">Newsletter</p>
+        <p class="text-light">Get the latest about us <span class="fw-bold">Sign up</span> Lorem ipsum dolor sit amet.
+        </p>
+
+      </div>
+
+      <div class="d-flex gap-5 mt-5">
+        <i class="fa-brands fa-facebook fs-3" style="color: #ffffff;"></i>
+        <i class="fa-brands fa-twitter fs-3" style="color: #ffffff;"></i>
+        <i class="fa-brands fa-linkedin fs-3" style="color: #ffffff;"></i>
+      </div>
+    </div>
+
+  </section>
+
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/urlParams.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/wishlist.js"></script>
+</body>
+
+</html>
