@@ -141,14 +141,22 @@ function renderItems(data) {
             console.log(btnToCart);
             btnToCart.addEventListener("click",()=>{
                 
-                if (localStorage.getItem("role") != "null" && clicked == true ){
+                if (localStorage.getItem("role") != "null" && clicked == true){
                     btnToCart.innerHTML = "Added"
                     alldataArr.push(dataObject)
                     localStorage.setItem("data", JSON.stringify(alldataArr))
                     itemAdded.classList.add("d-block")
                     itemAdded.classList.remove("d-none")
                     clicked = false
-                }else if(localStorage.getItem("role") == "null" || localStorage.getItem("role") == null){
+                }else if(localStorage.getItem("role") != null && clicked == true){
+                    btnToCart.innerHTML = "Added"
+                    alldataArr.push(dataObject)
+                    localStorage.setItem("data", JSON.stringify(alldataArr))
+                    itemAdded.classList.add("d-block")
+                    itemAdded.classList.remove("d-none")
+                    clicked = false
+                }
+                else if(localStorage.getItem("role") == "null" || localStorage.getItem("role") == null){
                     btnToCart.innerHTML = "Can't add this item"
                     btnToCart.classList.add("text-danger")
                     itemAdded.classList.add("d-block")
@@ -169,7 +177,15 @@ function renderItems(data) {
                     itemAdded.classList.add("d-block")
                     itemAdded.classList.remove("d-none")
                     clicked2 = false
-                }else if(localStorage.getItem("role") == "null" || localStorage.getItem("role") == null ){
+                }else if(localStorage.getItem("role") != null && clicked2 == true ){
+                    wishlistBtn.classList.add("fa-solid")
+                    wishDataArr.push(dataObject)
+                    localStorage.setItem("wishlist", JSON.stringify(wishDataArr))
+                    itemAdded.classList.add("d-block")
+                    itemAdded.classList.remove("d-none")
+                    clicked2 = false
+                }
+                else if(localStorage.getItem("role") == "null" || localStorage.getItem("role") == null ){
                     btnToCart.innerHTML = "Can't add this item"
                     btnToCart.classList.add("text-danger")
                     itemAdded.classList.add("d-block")
@@ -210,8 +226,5 @@ function newArrival(data) {
     }
  
 }
-
-
-
 
 
