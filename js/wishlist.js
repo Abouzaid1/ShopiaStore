@@ -56,3 +56,7 @@ if (localStorage.getItem("wishlist") != null) {
     }
   }
   document.title = `Shopia | Hope you can buy it`
+
+  if(localStorage.getItem("role")==null || localStorage.getItem("role") =="null"){
+    cartTBody.innerHTML = ""
+  }
