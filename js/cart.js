@@ -173,7 +173,9 @@ function sendEmail(){
 
 document.title = `Shopia | Complete the order`
 
-
+  if(localStorage.getItem("role")==null || localStorage.getItem("role") =="null"){
+    cartTBody.innerHTML = ""
+  }
 
 
 
