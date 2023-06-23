@@ -25,6 +25,8 @@ LocalStorages Used:
 
   
 Accounts:
-User Account: Username: ahmed | Password: 123456789
-Admin Account: Username: abouzaid | Password: admin123456789
+- User Account: Username: ahmed | Password: 123456789
+- Admin Account: Username: abouzaid | Password: admin123456789
+
+
 I hope this helps! Let me know if you have any further questions.
