@@ -1,30 +1,30 @@
 # ShopiaStore
-Hello dear!
-This is an E-commerce website that has alot of features and functions:-
-- Home Page : Contains the header section and then the new arrivals that will be added by the admin then it will show alot of news and new products and offers that is done by the company.
-- Shop Page : This page contains all the products that can be selled with a filter button to get the exact product that you need and you can use the search input.
-- Product Page : Once you clicked on a product you will go to the same product page by passing the parameter id of the product.
-- Cart Page : When you click on add to cart it will be stored to the localstorage according to your name and role.
-- WishList Page : When you click on the heart button of the product it will be saved in the localStorage to be displayed in the wishlist page.
-- Contact Page : When the user fill the inputs of the contact page this message will be saved to shown in the admin page.
+Hello there! I can see that you have provided an overview of the features and functions of your e-commerce website. I've made a few adjustments to the grammar and syntax for clarity:
 
-Admin role :-
-Admin Page : It contains ->
-- Messages (Contains all the messages that is written by the users).
-- Orders (Contains all the Orders that is Checked Out by the users) and you can complete the process by clicking the button.
-- Add Product (The page that will make the admin can add the products and it depends on the CRUD that the backend will develope).
+- Home Page: This page contains the header section, showcasing new arrivals added by the admin, as well as news, new products, and offers provided by the company.
+- Shop Page: Here, all the products available for sale are displayed. Users can utilize the filter button to find specific products and also use the search input for convenience.
+- Product Page: Clicking on a product will take users to its dedicated page, which is identified by the product's unique ID.
+- Cart Page: When users click on the "Add to Cart" button, the selected items are stored in the local storage, associated with the user's name and role.
+- Wishlist Page: By clicking on the heart button of a product, users can save it to their wishlist, which is stored in the local storage.
+- Contact Page: Users can fill out the provided form on this page to send messages. These messages are saved and can be viewed in the admin section.
 
-LocalStorages Used : 
-- User :- the user name of the users.
-- Role :- the role of each user.
-- Theme :- the theme of the website if it is dark or light.
-- Data :- the products of the json file that i have made.
-- Contact :- the messages that is made up by the user.
-- Wishlist :- the products that the user clicked on the heart button.
-- Cart :- the products that the user clicked on the Add to cart button.
+Admin Role: The Admin Page consists of the following sections:
+- Messages: This section displays all the messages written by users.
+- Orders: It contains a list of all the orders placed by users. The admin can process these orders and mark them as completed.
+- Add Product: This page allows the admin to add new products. The functionality of this page depends on the CRUD operations implemented by the backend.
 
+LocalStorages Used:
 
-Accounts :-
-- User -> Username : ahmed - Password:123456789
-- Admin -> Username : abouzaid - Password: admin123456789
+- User: Stores the username of the users.
+- Role: Stores the role of each user.
+- Theme: Stores the selected theme of the website (dark or light).
+- Data: Stores the product information retrieved from the JSON file.
+- Contact: Stores the messages submitted by users.
+- Wishlist: Stores the products that users have added to their wishlist.
+- Cart: Stores the products that users have added to their cart.
 
+  
+Accounts:
+User Account: Username: ahmed | Password: 123456789
+Admin Account: Username: abouzaid | Password: admin123456789
+I hope this helps! Let me know if you have any further questions.
