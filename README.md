@@ -25,6 +25,6 @@ LocalStorages Used :
 
 
 Accounts :-
-User -> Username : ahmed - Password:123456789
-Admin -> Username : abouzaid - Password: admin123456789
+- User -> Username : ahmed - Password:123456789
+- Admin -> Username : abouzaid - Password: admin123456789
 
